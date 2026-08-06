@@ -7,7 +7,7 @@
 <style>
   :root{
     --bg:#0f1115; --card:#181b22; --line:#262b34; --txt:#e8eaed; --sub:#9aa3ad;
-    --red:#ff5a5a; --green:#2ecc71; --gold:#f5c451; --blue:#5aa9ff; --purple:#b58bff;
+    --red:#ff5a5a; --green:#2ecc71; --gold:#f5c451; --blue:#5aa9ff; --purple:#b58bff; --oz:#3fd0c4;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--txt);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:18px 14px 48px;-webkit-font-smoothing:antialiased}
@@ -16,12 +16,18 @@
   header h1{font-size:23px;font-weight:800;letter-spacing:.5px}
   header .date{color:var(--sub);font-size:13px;margin-top:4px}
   .tag{display:inline-block;background:linear-gradient(90deg,#f5c451,#ff9d4d);color:#1a1205;font-weight:700;font-size:12px;padding:3px 10px;border-radius:20px;margin-top:8px}
+  .ver-note{color:var(--sub);font-size:12px;margin-top:6px}
   .lead{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 16px;margin:16px 0;font-size:15px}
   .lead b{color:var(--gold)}
+  .ver-head{display:flex;align-items:center;gap:8px;margin:22px 0 4px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  .ver-head .vt{font-size:15px;font-weight:800;letter-spacing:.5px}
+  .ver-head .vb{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:8px;padding:2px 8px}
+  .ver-head .vt.sun{color:var(--gold)}
+  .ver-head .vt.moon{color:var(--blue)}
   section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
   section h2{font-size:17px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
   .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
-  .d-red{background:var(--red)} .d-green{background:var(--green)} .d-gold{background:var(--gold)} .d-blue{background:var(--blue)} .d-purple{background:var(--purple)}
+  .d-red{background:var(--red)} .d-green{background:var(--green)} .d-gold{background:var(--gold)} .d-blue{background:var(--blue)} .d-purple{background:var(--purple)} .d-oz{background:var(--oz)}
   ul{list-style:none;padding-left:2px}
   li{position:relative;padding:7px 0 7px 18px;border-bottom:1px dashed #20242c}
   li:last-child{border-bottom:none}
@@ -36,8 +42,10 @@
   .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   @media(max-width:520px){.two{grid-template-columns:1fr}}
   .calendar li:before{background:var(--purple)}
+  .oz li:before{background:var(--oz)}
   footer{color:var(--sub);font-size:11.5px;text-align:center;margin-top:22px;line-height:1.6}
   .badge{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:8px;padding:2px 8px;display:inline-block;margin-top:4px}
+  .placeholder{color:var(--sub);font-size:14px;padding:18px 4px;text-align:center}
 </style>
 </head>
 <body>
@@ -45,8 +53,15 @@
   <header>
     <h1>宏观政策洞察日报</h1>
     <div class="date">2026年8月6日 · 星期四 · 悉尼时间</div>
-    <div class="tag">全球 + 中国宏观 · 投资视角</div>
+    <div class="tag">全球 + 中国 + 澳洲宏观 · 投资视角</div>
+    <div class="ver-note">📅 每日 07:30 早间版（盘前） · 20:00 晚间版（收盘复盘）自动更新</div>
   </header>
+
+<!-- MORNING-START -->
+  <div class="ver-head">
+    <span class="vt sun">🌅 早间版</span>
+    <span class="vb">约 07:30 更新 · 盘前宏观主线</span>
+  </div>
 
   <div class="lead">
     📌 <b>今日主线：</b>美国"小非农"腰斩——7 月 ADP 仅增 <b>4.4 万</b>人（前值下修至 9.5 万），就业降温直接把美联储 9 月加息预期打下来：美元指数一度<b>跌破 100</b>，现货黄金冲上 <b>4200 美元</b>创阶段新高。叠加霍尔木兹海峡有望重开、油价单日暴跌 6%，"通胀降温 + 紧缩预期回落"成为全球资产的定价新主线。中国这边，央行加量续做买断式逆回购呵护流动性，A 股放量大涨、科创 50 领涨 4.78%。
@@ -87,6 +102,17 @@
     </section>
   </div>
 
+  <section class="oz">
+    <h2><span class="dot d-oz"></span>澳洲本地政策</h2>
+    <ul>
+      <li><b>RBA 按兵不动预期：</b>现金利率 <span class="hl">4.35%</span>，下一次决议在 <b>8 月 11 日（周二）14:30 AEST</b>；四大行（CBA/NAB/ANZ/Westpac）一致预期维持不变，市场定价 8 月加息概率仅约 <span class="down">20%–30%</span>。但鹰派 bias 未除——Westpac、AMP 仍警示若通胀再超预期，<b>11 月可能再加 25bp</b>。</li>
+      <li><b>通胀仍高于目标：</b>最新年度 CPI 约 <span class="hl">4%–5%</span>（4 月触 4.6%、二季度或升至 5%），核心通胀 3.6%，明显高于 RBA 2%–3% 目标；失业率 4.4%，略高于预期。</li>
+      <li><b>联邦预算 2026/27 税改：</b>① 个税阶梯 7/1/2026 由 16% 降至 <span class="hl">15%</span>、7/1/2027 再降至 14%；② 在职者税收抵免 WATO 最高 $250（2027/28 起）；③ 燃油消费税减半（52.6→20.6 分/升，4/1 起三个月）；④ <b>资本利得税（CGT）改革</b>：2027/7/1 起以"通胀挂钩折扣"取代 50% 折扣并设 30% 最低税率；⑤ 负扣税限制于<b>新建住房</b>；⑥ 20 亿澳元地方基建基金促住房供给。</li>
+      <li><b>澳元与大宗商品：</b>AUD/USD 约 <span class="hl">0.6967</span>，贸易加权指数 65.3；黄金（$4792/oz）、铁矿石（$91/吨）等出口支撑澳元，使其对利率决议相对"脱敏"。</li>
+      <li><b>对 Nova 的含义：</b>你持有澳洲公司（ABN），2026/27 税改（CGT、负扣税、信托 30% 最低税 2028/7/1 起）将直接影响投资与资产持有结构，建议持续跟踪、必要时咨询澳洲会计师优化架构。</li>
+    </ul>
+  </section>
+
   <section>
     <h2><span class="dot d-purple"></span>对投资的市场影响</h2>
     <ul>
@@ -109,28 +135,43 @@
       <tr><td>现货黄金</td><td>4200.5 美元/盎司</td><td class="up">▲ 3.02%</td></tr>
       <tr><td>COMEX 白银</td><td>59.75 美元/盎司</td><td class="up">▲ 3.27%</td></tr>
       <tr><td>WTI 原油</td><td>75.14 美元/桶</td><td class="down">▼ 6.47%</td></tr>
+      <tr><td>AUD/USD</td><td>0.6967</td><td class="note">澳元受大宗商品支撑</td></tr>
       <tr><td>上证指数</td><td>3878.43</td><td class="up">▲ 1.47%</td></tr>
       <tr><td>科创 50</td><td>1693.67</td><td class="up">▲ 4.78%</td></tr>
       <tr><td>纳指（8/4 收盘）</td><td>26584.99</td><td class="up">▲ 2.59%</td></tr>
     </table>
-    <div class="note">数据截至 2026-08-06 悉尼清晨（对应北京时间 8/5 晚间）。来源：新华财经、经济参考报、上海证券报、汇通财经、环球市场播报等公开资讯。涨=红、跌=绿（A 股配色约定）。</div>
+    <div class="note">数据截至 2026-08-06 悉尼清晨（对应北京时间 8/5 晚间）。来源：新华财经、经济参考报、上海证券报、汇通财经、RBA、澳大利亚联邦预算案等公开资讯。涨=红、跌=绿（A 股配色约定）。</div>
   </section>
 
   <section class="calendar">
-    <h2><span class="dot d-purple"></span>未来关注日历</h2>
+    <h2><span class="dot d-purple"></span>盘前关注日历</h2>
     <ul>
       <li><b>本周五（北京时间 8/7 20:30）：</b>美国 7 月非农就业报告——本月最重要事件。市场预期新增 <span class="hl">8 万–9.1 万</span>人，失业率或从 4.2% 升至 4.3%。ADP 已经"预警"，若非农同步走弱，加息预期将被进一步打掉，利好黄金与成长股；若意外强劲，美债与美元恐再度冲高。</li>
       <li><b>今日 / 明日：</b>美国初请失业金人数（8/6）；美联储官员密集讲话；美国财政部季度再融资拍卖安排落地。</li>
+      <li><b>8/11（周二）14:30 AEST：</b>澳洲联储（RBA）利率决议——预期维持 4.35% 不变，关注声明是否保留加息 bias（影响澳元与在澳资产成本）。</li>
       <li><b>财报窗口：</b>AMD、闪迪、迪士尼、优步、礼来等陆续披露；SpaceX 巨量解禁（最多 9.115 亿股）对纳指构成流动性压力测试。</li>
       <li><b>中国政策窗口：</b>8 月中下旬约 1.6 万亿中长期资金到期，关注 MLF 与买断式逆回购续作力度；A 股中报披露高峰，定价逻辑从情绪博弈转向基本面验证。</li>
       <li><b>地缘：</b>美伊谈判能否形成可执行的霍尔木兹通航安排——这是决定下半年全球通胀中枢的关键变量。</li>
     </ul>
   </section>
+<!-- MORNING-END -->
+
+<!-- EVENING-START -->
+  <div class="ver-head">
+    <span class="vt moon">🌆 晚间版</span>
+    <span class="vb">约 20:00 更新 · 收盘复盘与政策落地</span>
+  </div>
+
+  <div class="placeholder">
+    🌆 晚间版将于今日约 <b>20:00（悉尼时间）</b>自动更新，带来：当日市场实际表现复盘、政策/事件落地影响、以及明日盘前关注。<br/>
+    早间版的宏观主线与分析依然有效，可先参考。
+  </div>
+<!-- EVENING-END -->
 
   <footer>
     本报告由 WorkBuddy 基于公开新闻自动汇编，仅供学习与研究参考，<b>不构成任何投资建议</b>。<br/>
-    每日 07:30（悉尼时间）自动更新 · 链接永久有效，手机浏览器收藏即可天天看。
-    <div class="badge">生成时间 2026-08-06 · 版本 v1.1</div>
+    每日 07:30 早间版 / 20:00 晚间版 自动更新 · 链接永久有效，手机浏览器收藏即可天天看。
+    <div class="badge">生成时间 2026-08-06 · 版本 v2.0</div>
   </footer>
 </div>
 </body>
