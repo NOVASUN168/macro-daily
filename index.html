@@ -46,6 +46,26 @@
   footer{color:var(--sub);font-size:11.5px;text-align:center;margin-top:22px;line-height:1.6}
   .badge{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:8px;padding:2px 8px;display:inline-block;margin-top:4px}
   .placeholder{color:var(--sub);font-size:14px;padding:18px 4px;text-align:center}
+  /* 📖 小白解读（大白话版）——浅色便签卡片，与深色主题区分 */
+  .abc{background:linear-gradient(180deg,#fdfaf3,#f6f1e6);border:1px solid #e6dcc6;border-radius:14px;padding:16px;margin:14px 0;color:#2b2519}
+  .abc h2{font-size:17px;font-weight:800;margin-bottom:2px;color:#7a5c12;display:flex;align-items:center;gap:8px}
+  .abc .abc-sub{font-size:12.5px;color:#8a7c5f;margin-bottom:4px}
+  .abc .blk{background:#fffdf8;border:1px solid #ece2cd;border-radius:10px;padding:12px 13px;margin-top:11px}
+  .abc .blk h3{font-size:14.5px;font-weight:800;color:#8a6a14;margin-bottom:6px}
+  .abc p{font-size:14.5px;line-height:1.78}
+  .abc ul{padding-left:2px}
+  .abc li{padding:6px 0 6px 18px;border-bottom:1px dashed #ece2cd;color:#2b2519;font-size:14px}
+  .abc li:last-child{border-bottom:none}
+  .abc li:before{background:#d9a52b;top:14px}
+  .abc b{color:#7a5c12}
+  .abc .up{color:#d92b2b;font-weight:700}
+  .abc .down{color:#1e9e5a;font-weight:700}
+  .abc .chain{counter-reset:st}
+  .abc .chain li{padding-left:30px}
+  .abc .chain li:before{counter-increment:st;content:counter(st);width:19px;height:19px;border-radius:50%;background:#d9a52b;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;left:0;top:10px}
+  .abc .word{background:#fff8e8;border-left:3px solid #d9a52b;border-radius:6px;padding:8px 10px;margin-top:7px;font-size:13.5px;line-height:1.7}
+  .abc .learn{background:#eef7f0;border:1px solid #cfe6d6;border-radius:10px;padding:11px 13px;margin-top:11px;font-size:14px;color:#204c33;line-height:1.75}
+  .abc .learn b{color:#14663f}
 </style>
 </head>
 <body>
@@ -156,6 +176,46 @@
       <li><b>地缘：</b>霍尔木兹海峡通航安排能否落地——决定油价与全球通胀中枢的关键变量；韩国杠杆 ETF 监管后续（KOSPI 8/7 重挫约 4.6%）。</li>
     </ul>
   </section>
+  <section class="abc">
+    <h2>📖 小白解读（大白话版）</h2>
+    <div class="abc-sub">不用懂术语，看这一段就够——理解今天世界发生了什么、钱往哪儿跑。</div>
+
+    <div class="blk">
+      <h3>💬 今日一句话主线</h3>
+      <p>美国上个月<b>不但没多招人，反而少了 2.3 万个岗位</b>，把所有人都吓了一跳。大家立刻想：经济这么虚，美联储应该不敢再加息了吧？于是钱一窝蜂涌向<b>黄金和股票</b>，同时<b>抛掉美元</b>。简单说：<b>今天全世界在赌"钱要变松了"</b>。</p>
+    </div>
+
+    <div class="blk">
+      <h3>🔗 因果链（用生活比喻看懂）</h3>
+      <ul class="chain">
+        <li><b>美国的"招工成绩单"考砸了。</b>非农就业 = 美国每月发一次的招人成绩单。这次不但没进步，还倒扣分（少了 2.3 万人）。</li>
+        <li><b>大家猜"空调"不会再往冷里拧了。</b>美联储加息 = 把空调遥控器拧到制冷档，让过热的经济降温。现在经济自己都发抖了，还降什么温？于是加息概率从 55% 掉到 40%。</li>
+        <li><b>钱开始嫌美元不香了。</b>加息 = 存美元利息高。现在加不动了，存美元不划算，钱就往外跑 → <b>美元走弱</b>。</li>
+        <li><b>黄金和股票接住了这波钱。</b>黄金 = 乱世里的保险箱，美元一虚它就涨（<span class="up">一天涨 3%+</span>）；股票也高兴，因为借钱成本不会再涨了。</li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <h3>💰 和你钱包的关系</h3>
+      <ul>
+        <li><b>黄金：</b>已经冲到 <span class="up">4370 美元/盎司</span>，一天涨 3% 多。<b>涨太猛了，现在追高容易站岗</b>，想买的话等回调、分几次买，别一把梭。</li>
+        <li><b>人民币：</b>美元变弱，人民币就相对更值钱（数字从 6.8 变到 6.75，<b>数字变小 = 人民币更值钱</b>）。海淘、换外币、给孩子交国外学费，现在比上个月划算一点点。</li>
+        <li><b>澳元（你最相关）：</b>在 0.70 附近。澳元强 → 你从国外进货（比如 USANA 产品）成本更低；但如果要拿澳元换美元买美股，就偏贵一点。</li>
+        <li><b>油价：</b>中东那条运油的"海上高速公路"（霍尔木兹）快通了，油价压力在减。<b>油便宜 = 运输便宜 = 长期物价压力小一点</b>。</li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <h3>🃏 今日生词卡</h3>
+      <div class="word"><b>非农就业：</b>美国每月公布的"这个月净招了多少人"（不算种地的）。<b>比喻：全美国的月度招人成绩单</b>——考好了说明经济壮，考砸了说明经济虚。</div>
+      <div class="word"><b>美债收益率：</b>把钱借给美国政府能拿多少利息。今天从 4.68% 降到 <b>4.62%</b>。<b>比喻：银行存款利率</b>——它降了，存钱不香了，大家就更愿意去买股票和黄金。</div>
+      <div class="word"><b>劳动参与率：</b>适龄人口里有多少人还在找工作。这次跌到 61.4%（五年最低）。<b>比喻：班上很多同学干脆不考试了</b>——所以"失业率"看着降了，其实不是好事，是分母变小了。</div>
+    </div>
+
+    <div class="learn">
+      <b>🎓 今天学到什么：</b>以后再看到「失业率下降」，先别急着叫好，要多问一句——<b>是找到工作的人变多了，还是干脆放弃找工作的人变多了？</b>今天就是后者。这是财经新闻里最常见的一个"数字陷阱"，看懂它，你就比 90% 的人多一层眼力。
+    </div>
+  </section>
 <!-- MORNING-END -->
 
 <!-- EVENING-START -->
@@ -220,12 +280,52 @@
     </ul>
     <div class="note">数据截至 2026-08-08（周六）悉尼上午，覆盖 8/7 全球收盘与本周周度表现。来源：CNBC、FX168、富途、新浪财经、每日经济新闻、格隆汇、ASX 官网、中国海关总署等公开资讯。涨=红、跌=绿（A 股配色约定）。本报告不构成投资建议。</div>
   </section>
+  <section class="abc">
+    <h2>📖 小白解读（大白话版 · 本周收官）</h2>
+    <div class="abc-sub">这一周到底发生了什么、下周该盯什么——用大白话讲一遍。</div>
+
+    <div class="blk">
+      <h3>💬 今晚一句话主线</h3>
+      <p>这一周很反常：<b>股票和黄金居然一起涨</b>。平时它俩是跷跷板——大家怕了就买黄金、乐观了就买股票，很少同时涨。这周同时涨，是因为出现了一件"两边都开心"的事：<b>美国经济数据变差 + 油价大跌</b>，让所有人都相信"钱要变松、物价要降温"。所以<b>钱不是从股票搬去黄金，而是外面又涌进来一大笔新钱，两边都分到了</b>。</p>
+    </div>
+
+    <div class="blk">
+      <h3>🔗 因果链（用生活比喻看懂）</h3>
+      <ul class="chain">
+        <li><b>两件好事撞一起了。</b>一是美国招工成绩单考砸（少 2.3 万人），二是中东运油通道快谈拢了，油价一周<span class="down">跌了 7.67%</span>。</li>
+        <li><b>物价压力和加息压力同时松绑。</b>油便宜 = 什么都便宜一点（油是所有东西的运输成本）；经济变虚 = 央行不敢再拧紧。<b>比喻：一边关掉制冷空调，一边把水龙头拧松。</b></li>
+        <li><b>钱一看"环境变舒服了"，就全出来玩了。</b>纳斯达克一周 <span class="up">涨 5.19%</span>（4 月以来最好）、白银 <span class="up">涨 10.4%</span>、黄金 <span class="up">涨 7.2%</span>，连芯片股都涨 7%。</li>
+        <li><b>但有个隐患没人算账。</b>数据变差的真实含义是<b>经济在走弱</b>，现在大家只顾着高兴"不加息了"，没人管"经济真的病了怎么办"。<b>比喻：老板说不裁员了大家欢呼，却没问公司为什么突然不赚钱了。</b></li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <h3>💰 和你钱包的关系</h3>
+      <ul>
+        <li><b>黄金/白银：</b>本周是最大赢家（金 <span class="up">+7.2%</span>、银 <span class="up">+10.4%</span>），金矿公司股票涨得比金价还猛——那是<b>专业玩家在加杠杆下注</b>的信号。好消息，但也意味着<b>现在进场是接高位</b>，等回调再分批。</li>
+        <li><b>澳元（你最相关）：</b>涨到 <span class="up">0.7066</span>，近期相对高位。<b>要用美元换澳元 → 现在划算</b>；要拿澳元换美元买美股 → 偏贵，可以等等。无论哪边，<b>分几次换，别一次押满</b>。</li>
+        <li><b>你在澳洲的贷款：</b>全球都在"不加息"，RBA（澳洲央行）下周二基本确定按兵不动（概率 82%）。<b>利息见顶的信号更明确了</b>，对有房贷/负债的人是好事。</li>
+        <li><b>进货成本：</b>澳元变强 + 油价大跌，从海外进货（比如 USANA 产品）这周成本是下降的——这是本周对你最直接的实惠。</li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <h3>🃏 今日生词卡</h3>
+      <div class="word"><b>周度涨跌幅：</b>一整周下来涨了多少，而不是看某一天。<b>比喻：看月考成绩，而不是看某道题对没对</b>——一天的涨跌常常是噪音，一周的方向才是资金真实想法。</div>
+      <div class="word"><b>地缘溢价：</b>因为打仗/紧张，油价里被多加的那部分"恐慌费"。现在中东要谈拢了，这笔费用正在被退回来，所以油价一周暴跌。<b>比喻：台风天外卖加的配送费，天晴了就取消了。</b></div>
+      <div class="word"><b>CPI（消费者物价指数）：</b>下周美国要公布的大数据，就是"东西涨价了没有"。<b>比喻：全国统一的菜市场价格表</b>——它是这波乐观情绪的<b>期末考</b>，考砸了这周的涨幅可能要还回去。</div>
+    </div>
+
+    <div class="learn">
+      <b>🎓 今天学到什么：</b>记住一个规律——<b>股票和黄金同时大涨，通常不是因为大家看法一致，而是因为"钱变多了"</b>。这种行情来得猛、但根基不稳，全看下周的两个考试：<b>周二澳洲央行开会</b>（影响你的贷款和澳元）、<b>下周美国 CPI</b>（影响全球）。<b>考过了行情继续，考砸了这周涨的可能得吐回去</b>——所以现在不适合追高，适合观望和分批。
+    </div>
+  </section>
 <!-- EVENING-END -->
 
   <footer>
     本报告由 WorkBuddy 基于公开新闻自动汇编，仅供学习与研究参考，<b>不构成任何投资建议</b>。<br/>
     每日 07:30 早间版 / 20:00 晚间版 自动更新 · 链接永久有效，手机浏览器收藏即可天天看。
-    <div class="badge">生成时间 2026-08-08 · 版本 v2.3（晚间版 · 周末收官复盘）</div>
+    <div class="badge">生成时间 2026-08-08 · 版本 v2.4（早间版 + 晚间版 · 均含 📖 小白解读）</div>
   </footer>
 </div>
 </body>
