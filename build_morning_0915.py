@@ -1,84 +1,14 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>宏观政策洞察日报 · 2026-09-15</title>
-<style>
-  :root{
-    --bg:#0f1115; --card:#181b22; --line:#262b34; --txt:#e8eaed; --sub:#9aa3ad;
-    --red:#ff5a5a; --green:#2ecc71; --gold:#f5c451; --blue:#5aa9ff; --purple:#b58bff; --oz:#3fd0c4;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--txt);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:18px 14px 48px;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:760px;margin:0 auto}
-  header{text-align:center;padding:14px 0 6px}
-  header h1{font-size:23px;font-weight:800;letter-spacing:.5px}
-  header .date{color:var(--sub);font-size:13px;margin-top:4px}
-  .tag{display:inline-block;background:linear-gradient(90deg,#f5c451,#ff9d4d);color:#1a1205;font-weight:700;font-size:12px;padding:3px 10px;border-radius:20px;margin-top:8px}
-  .ver-note{color:var(--sub);font-size:12px;margin-top:6px}
-  .lead{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 16px;margin:16px 0;font-size:15px}
-  .lead b{color:var(--gold)}
-  .ver-head{display:flex;align-items:center;gap:8px;margin:22px 0 4px;padding-bottom:6px;border-bottom:1px solid var(--line)}
-  .ver-head .vt{font-size:15px;font-weight:800;letter-spacing:.5px}
-  .ver-head .vb{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:8px;padding:2px 8px}
-  .ver-head .vt.sun{color:var(--gold)}
-  .ver-head .vt.moon{color:var(--blue)}
-  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
-  section h2{font-size:17px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
-  .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
-  .d-red{background:var(--red)} .d-green{background:var(--green)} .d-gold{background:var(--gold)} .d-blue{background:var(--blue)} .d-purple{background:var(--purple)} .d-oz{background:var(--oz)}
-  ul{list-style:none;padding-left:2px}
-  li{position:relative;padding:7px 0 7px 18px;border-bottom:1px dashed #20242c}
-  li:last-child{border-bottom:none}
-  li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
-  .hl{color:var(--gold);font-weight:700}
-  .up{color:var(--red);font-weight:700}
-  .down{color:var(--green);font-weight:700}
-  .note{color:var(--sub);font-size:12.5px;margin-top:6px}
-  table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13.5px}
-  th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line)}
-  th{color:var(--sub);font-weight:600;font-size:12.5px}
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  @media(max-width:520px){.two{grid-template-columns:1fr}}
-  .calendar li:before{background:var(--purple)}
-  .oz li:before{background:var(--oz)}
-  footer{color:var(--sub);font-size:11.5px;text-align:center;margin-top:22px;line-height:1.6}
-  .badge{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:8px;padding:2px 8px;display:inline-block;margin-top:4px}
-  .placeholder{color:var(--sub);font-size:14px;padding:18px 4px;text-align:center}
-  /* 📖 小白解读（大白话版）——浅色便签卡片，与深色主题区分 */
-  .abc{background:linear-gradient(180deg,#fdfaf3,#f6f1e6);border:1px solid #e6dcc6;border-radius:14px;padding:16px;margin:14px 0;color:#2b2519}
-  .abc h2{font-size:17px;font-weight:800;margin-bottom:2px;color:#7a5c12;display:flex;align-items:center;gap:8px}
-  .abc .abc-sub{font-size:12.5px;color:#8a7c5f;margin-bottom:4px}
-  .abc .blk{background:#fffdf8;border:1px solid #ece2cd;border-radius:10px;padding:12px 13px;margin-top:11px}
-  .abc .blk h3{font-size:14.5px;font-weight:800;color:#8a6a14;margin-bottom:6px}
-  .abc p{font-size:14.5px;line-height:1.78}
-  .abc ul{padding-left:2px}
-  .abc li{padding:6px 0 6px 18px;border-bottom:1px dashed #ece2cd;color:#2b2519;font-size:14px}
-  .abc li:last-child{border-bottom:none}
-  .abc li:before{background:#d9a52b;top:14px}
-  .abc b{color:#7a5c12}
-  .abc .up{color:#d92b2b;font-weight:700}
-  .abc .down{color:#1e9e5a;font-weight:700}
-  .abc .chain{counter-reset:st}
-  .abc .chain li{padding-left:30px}
-  .abc .chain li:before{counter-increment:st;content:counter(st);width:19px;height:19px;border-radius:50%;background:#d9a52b;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;left:0;top:10px}
-  .abc .word{background:#fff8e8;border-left:3px solid #d9a52b;border-radius:6px;padding:8px 10px;margin-top:7px;font-size:13.5px;line-height:1.7}
-  .abc .learn{background:#eef7f0;border:1px solid #cfe6d6;border-radius:10px;padding:11px 13px;margin-top:11px;font-size:14px;color:#204c33;line-height:1.75}
-  .abc .learn b{color:#14663f}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <header>
-    <h1>宏观政策洞察日报</h1>
-    <div class="date">2026年9月15日 · 星期二 · 悉尼时间（🌅 早间版 07:30 已更新 · 🌆 晚间版 20:00 待更新）</div>
-    <div class="tag">全球 + 中国 + 澳洲宏观 · 投资视角</div>
-    <div class="ver-note">📅 每日 07:30 早间版（盘前） · 20:00 晚间版（收盘复盘）自动更新</div>
-  </header>
+# -*- coding: utf-8 -*-
+import io, os, re
 
-<!-- MORNING-START -->
-  <div class="ver-head">
+src = r"C:/Users/zsgre/macro-daily/index.html"
+dst = src
+
+with io.open(src, encoding="utf-8") as f:
+    html = f.read()
+
+# ---------- NEW MORNING BODY (between MORNING-START and MORNING-END) ----------
+morning = u"""  <div class="ver-head">
     <span class="vt sun">🌅 早间版</span>
     <span class="vb">约 07:30 更新 · 周二盘前(Fed 9/15-16会议·9/16加息~90%&10Y破5%&黄金失守4300&油价106&中国8月数据今日出炉&A股3885&澳元0.714&RBA 9/29加息80%&小白解读)</span>
   </div>
@@ -235,21 +165,36 @@
       <b>🎓 今天学到什么：</b>今天最重要的一课——把"<b>油、物价、利息、金价、股指</b>"看成一条链，而不是四个孤立新闻：<b>中东风险 + 物价黏 → 央行加息（遥控器拧制冷）→ 美国国债利息破 5% → 存款利息高 → 金价被压、澳元看利差、房贷更重</b>。以后新闻里看到"某条油管/某条航道出事"或"国债收益率破某关"，别只想到加油贵，要顺着这条链往下想：<b>它会不会推高我的房贷、压低我手里的金子和澳元？</b>学会看"一条线"而不是"一个点"，你就比大多数人更早看懂趋势。<br/><br/><b>第二课：A 股"指数小跌、个股普涨"在告诉你什么——这是"高低切换"，不是崩盘。</b>昨天沪指只跌 0.07%，却有超 3100 只股票上涨，说明大蓝筹/高位人气在退潮，但小票和低位题材（培育钻石、MLCC、CRO、汽车整车）在活跃。<b>以后看到"指数绿但超 3000 家涨"，别慌——那是资金在换仓、结构在轮动，不是全盘垮。</b>看懂这个，你就不会被"大盘绿"吓到乱割肉。
     </div>
   </section>
-<!-- MORNING-END -->
+"""
 
-<!-- EVENING-START -->
-  <div class="ver-head">
+# ---------- EVENING PLACEHOLDER (between EVENING-START and EVENING-END) ----------
+evening = u"""  <div class="ver-head">
     <span class="vt moon">🌆 晚间版</span>
     <span class="vb">约 20:00 更新 · 周二收盘复盘（待自动填充）</span>
   </div>
   <div class="placeholder">🌆 晚间版将于今日约 20:00（悉尼时间）自动更新，盘前早间版已先行发布；收盘复盘（A 股/港股/ASX/美股/油金/澳元最新 + 小白解读）将由 20:00 自动化任务自动填充。本页链接永久有效，手机浏览器收藏即可天天看最新版。</div>
-<!-- EVENING-END -->
+"""
 
-  <footer>
-    本报告由 WorkBuddy 基于公开新闻自动汇编，仅供学习与研究参考，<b>不构成任何投资建议</b>。<br/>
-    每日 07:30 早间版 / 20:00 晚间版 自动更新 · 链接永久有效，手机浏览器收藏即可天天看。
-    <div class="badge">生成时间 2026-09-15 07:30 悉尼时间 · 版本 v2.55（早间版·周二·Fed 9/16加息~90%&10Y破5%&黄金失守4300&油价106&中国8月数据今日出炉&A股3885&澳元0.714&小白解读）</div>
-  </footer>
-</div>
-</body>
-</html>
+def replace_between(text, start_marker, end_marker, new_content):
+    si = text.index(start_marker)
+    ei = text.index(end_marker, si) + len(end_marker)
+    return text[:si] + new_content.strip("\n") + "\n" + text[ei:]
+
+html = replace_between(html, "<!-- MORNING-START -->", "<!-- MORNING-END -->", morning)
+html = replace_between(html, "<!-- EVENING-START -->", "<!-- EVENING-END -->", evening)
+
+# ---------- title + header date + footer badge ----------
+html = html.replace(u"宏观政策洞察日报 · 2026-09-14", u"宏观政策洞察日报 · 2026-09-15")
+html = html.replace(
+    u"2026年9月14日 · 星期一 · 悉尼时间（🌅 早间版 07:30 已更新 · 🌆 晚间版 20:00 已更新）",
+    u"2026年9月15日 · 星期二 · 悉尼时间（🌅 早间版 07:30 已更新 · 🌆 晚间版 20:00 待更新）")
+html = html.replace(
+    u"生成时间 2026-09-14 20:00 悉尼时间 · 版本 v2.54（晚间版·周一收盘复盘：A股3885缩量抗跌3100股涨&ASX8749走平&AUD0.7142&油价107破百&黄金4349&Fed9/16加息87%&小白解读）",
+    u"生成时间 2026-09-15 07:30 悉尼时间 · 版本 v2.55（早间版·周二·Fed 9/16加息~90%&10Y破5%&黄金失守4300&油价106&中国8月数据今日出炉&A股3885&澳元0.714&小白解读）")
+
+with io.open(dst, "w", encoding="utf-8") as f:
+    f.write(html)
+
+print("written. morning present:", "<!-- MORNING-START -->" in html and "小白解读" in html)
+print("title ok:", "2026-09-15" in html)
+print("evening placeholder ok:", "待自动填充" in html)
