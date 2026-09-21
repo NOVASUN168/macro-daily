@@ -1,84 +1,13 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>宏观政策洞察日报 · 2026-09-22</title>
-<style>
-  :root{
-    --bg:#0f1115; --card:#181b22; --line:#262b34; --txt:#e8eaed; --sub:#9aa3ad;
-    --red:#ff5a5a; --green:#2ecc71; --gold:#f5c451; --blue:#5aa9ff; --purple:#b58bff; --oz:#3fd0c4;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--txt);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:18px 14px 48px;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:760px;margin:0 auto}
-  header{text-align:center;padding:14px 0 6px}
-  header h1{font-size:23px;font-weight:800;letter-spacing:.5px}
-  header .date{color:var(--sub);font-size:13px;margin-top:4px}
-  .tag{display:inline-block;background:linear-gradient(90deg,#f5c451,#ff9d4d);color:#1a1205;font-weight:700;font-size:12px;padding:3px 10px;border-radius:20px;margin-top:8px}
-  .ver-note{color:var(--sub);font-size:12px;margin-top:6px}
-  .lead{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 16px;margin:16px 0;font-size:15px}
-  .lead b{color:var(--gold)}
-  .ver-head{display:flex;align-items:center;gap:8px;margin:22px 0 4px;padding-bottom:6px;border-bottom:1px solid var(--line)}
-  .ver-head .vt{font-size:15px;font-weight:800;letter-spacing:.5px}
-  .ver-head .vb{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:8px;padding:2px 8px}
-  .ver-head .vt.sun{color:var(--gold)}
-  .ver-head .vt.moon{color:var(--blue)}
-  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
-  section h2{font-size:17px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
-  .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
-  .d-red{background:var(--red)} .d-green{background:var(--green)} .d-gold{background:var(--gold)} .d-blue{background:var(--blue)} .d-purple{background:var(--purple)} .d-oz{background:var(--oz)}
-  ul{list-style:none;padding-left:2px}
-  li{position:relative;padding:7px 0 7px 18px;border-bottom:1px dashed #20242c}
-  li:last-child{border-bottom:none}
-  li:before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
-  .hl{color:var(--gold);font-weight:700}
-  .up{color:var(--red);font-weight:700}
-  .down{color:var(--green);font-weight:700}
-  .note{color:var(--sub);font-size:12.5px;margin-top:6px}
-  table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13.5px}
-  th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line)}
-  th{color:var(--sub);font-weight:600;font-size:12.5px}
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  @media(max-width:520px){.two{grid-template-columns:1fr}}
-  .calendar li:before{background:var(--purple)}
-  .oz li:before{background:var(--oz)}
-  footer{color:var(--sub);font-size:11.5px;text-align:center;margin-top:22px;line-height:1.6}
-  .badge{font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:8px;padding:2px 8px;display:inline-block;margin-top:4px}
-  .placeholder{color:var(--sub);font-size:14px;padding:18px 4px;text-align:center}
-  /* 📖 小白解读（大白话版）——浅色便签卡片，与深色主题区分 */
-  .abc{background:linear-gradient(180deg,#fdfaf3,#f6f1e6);border:1px solid #e6dcc6;border-radius:14px;padding:16px;margin:14px 0;color:#2b2519}
-  .abc h2{font-size:17px;font-weight:800;margin-bottom:2px;color:#7a5c12;display:flex;align-items:center;gap:8px}
-  .abc .abc-sub{font-size:12.5px;color:#8a7c5f;margin-bottom:4px}
-  .abc .blk{background:#fffdf8;border:1px solid #ece2cd;border-radius:10px;padding:12px 13px;margin-top:11px}
-  .abc .blk h3{font-size:14.5px;font-weight:800;color:#8a6a14;margin-bottom:6px}
-  .abc p{font-size:14.5px;line-height:1.78}
-  .abc ul{padding-left:2px}
-  .abc li{padding:6px 0 6px 18px;border-bottom:1px dashed #ece2cd;color:#2b2519;font-size:14px}
-  .abc li:last-child{border-bottom:none}
-  .abc li:before{background:#d9a52b;top:14px}
-  .abc b{color:#7a5c12}
-  .abc .up{color:#d92b2b;font-weight:700}
-  .abc .down{color:#1e9e5a;font-weight:700}
-  .abc .chain{counter-reset:st}
-  .abc .chain li{padding-left:30px}
-  .abc .chain li:before{counter-increment:st;content:counter(st);width:19px;height:19px;border-radius:50%;background:#d9a52b;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;left:0;top:10px}
-  .abc .word{background:#fff8e8;border-left:3px solid #d9a52b;border-radius:6px;padding:8px 10px;margin-top:7px;font-size:13.5px;line-height:1.7}
-  .abc .learn{background:#eef7f0;border:1px solid #cfe6d6;border-radius:10px;padding:11px 13px;margin-top:11px;font-size:14px;color:#204c33;line-height:1.75}
-  .abc .learn b{color:#14663f}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <header>
-    <h1>宏观政策洞察日报</h1>
-    <div class="date">2026年9月22日 · 星期二 · 悉尼时间（🌅 早间版 07:30 已更新 · 🌆 晚间版 20:00 待更新）</div>
-    <div class="tag">全球 + 中国 + 澳洲宏观 · 投资视角</div>
-    <div class="ver-note">📅 每日 07:30 早间版（盘前） · 20:00 晚间版（收盘复盘）自动更新</div>
-  </header>
+# -*- coding: utf-8 -*-
+import io
 
-<!-- MORNING-START -->
-  <div class="ver-head">
+PATH = r"C:/Users/zsgre/macro-daily/index.html"
+
+with io.open(PATH, "r", encoding="utf-8") as f:
+    html = f.read()
+
+# ---- 新早间版内容（不含 MORNING-START/END 注释标记，标记保留在文件中）----
+new_morning = '''  <div class="ver-head">
     <span class="vt sun">🌅 早间版</span>
     <span class="vb">约 07:30 更新 · 周二盘前(油价回落10Y失守5%喘息窗口&纳指新高&鹰声未散Kashkari转鹰&人民币6.6955三年半新高&习近平9/23访美&RBA 9/29加息&小白解读)</span>
   </div>
@@ -234,18 +163,49 @@
     <div class="learn">
       <b>🎓 今天学到什么：</b>今天最重要的一课——把"<b>反弹</b>"和"<b>反转</b>"分开看：今天美股涨、比特币涨、黄金稳，是因为<b>油价跌 + 10Y 失守 5%</b> 这两个"短期松绑"给的"中场休息"，不是美联储认输。<b>以后看到"股市大涨"，别急着追——先问一句"涨的原因是什么"：若是地缘降温/利率回落这种"喘气"，窗口脆弱、随时可被中东反复打断；若是"央行明确说不加了"，那才是真反转。学会看"涨的是喘息还是反转"，你就比大多数人稳。</b><br/><br/><b>第二课：今天"美债 10Y 失守 5%"在告诉你——它仍是全球估值的天花板。</b>10Y 站回 5% 上方，AI/半导体/创新药这些"靠未来赚钱"的资产就又被压；跌破 4.9% 才真松口气。<b>以后看新闻，顺手看一眼"美国 10 年国债收益率到多少"：它像水位计，水位（利率）高，所有船（估值）都低；水位降，船才浮起来。这是看懂全球钱往哪流最快的一招。</b>看懂这个，你就不会被"大盘红绿"牵着走，而是先问"利息到哪了"。
     </div>
-  </section>
-<!-- MORNING-END -->
+  </section>'''
 
-<!-- EVENING-START -->
-  <div class="placeholder">🌆 晚间版将于今日约 20:00（悉尼时间）自动更新，盘前请先参考上方早间版 · 含「📖 小白解读（大白话版）」。</div>
-<!-- EVENING-END -->
+# ---- 标记保留：替换 MORNING-START 与 MORNING-END 之间的内容 ----
+ms = html.find("MORNING-START")
+me = html.find("MORNING-END")
+if ms == -1 or me == -1:
+    raise SystemExit("找不到 MORNING 标记")
+# 标记注释行形如: <!-- MORNING-START --> 与 <!-- MORNING-END -->
+start_tag = html.find("-->", ms) + 3
+end_tag = html.rfind("<!--", 0, me)
+new_html = html[:start_tag] + "\n" + new_morning + "\n" + html[end_tag:]
 
-  <footer>
-    本报告由 WorkBuddy 基于公开新闻自动汇编，仅供学习与研究参考，<b>不构成任何投资建议</b>。<br/>
-    每日 07:30 早间版 / 20:00 晚间版 自动更新 · 链接永久有效，手机浏览器收藏即可天天看。
-    <div class="badge">生成时间 2026-09-22 07:30 悉尼时间 · 版本 v2.59（早间版·周二·油价回落10Y失守5%喘息窗口&纳指新高&鹰声未散&人民币6.6955三年半新高&习近平访美&RBA 9/29加息&小白解读）</div>
-  </footer>
-</div>
-</body>
-</html>
+# ---- 更新标题 / 日期行 / 底部 badge ----
+new_html = new_html.replace(
+    "<title>宏观政策洞察日报 · 2026-09-21</title>",
+    "<title>宏观政策洞察日报 · 2026-09-22</title>"
+)
+new_html = new_html.replace(
+    '2026年9月21日 · 星期一 · 悉尼时间（🌅 早间版 07:30 已更新 · 🌆 晚间版 20:00 待更新）',
+    '2026年9月22日 · 星期二 · 悉尼时间（🌅 早间版 07:30 已更新 · 🌆 晚间版 20:00 待更新）'
+)
+new_html = new_html.replace(
+    '生成时间 2026-09-21 07:30 悉尼时间 · 版本 v2.58（早间版·周一·Fed加息后首周&10Y逼5%&Kashkari转鹰&油价因中东再升温&黄金4377&RMB~6.696&LPR连16月不变&沪指重返3900&RBA 9/29加息67-80%&小白解读）',
+    '生成时间 2026-09-22 07:30 悉尼时间 · 版本 v2.59（早间版·周二·油价回落10Y失守5%喘息窗口&纳指新高&鹰声未散&人民币6.6955三年半新高&习近平访美&RBA 9/29加息&小白解读）'
+)
+
+with io.open(PATH, "w", encoding="utf-8") as f:
+    f.write(new_html)
+
+# ---- 自检 ----
+checks = {
+    "MORNING-START": new_html.count("MORNING-START"),
+    "MORNING-END": new_html.count("MORNING-END"),
+    "EVENING-START": new_html.count("EVENING-START"),
+    "EVENING-END": new_html.count("EVENING-END"),
+    "小白解读": new_html.count("小白解读（大白话版）"),
+    "标题含09-22": "宏观政策洞察日报 · 2026-09-22" in new_html,
+    "v2.59": "v2.59" in new_html,
+    "EVENING占位": "晚间版将于今日约 20:00" in new_html,
+    "oz七条": new_html.count('class="oz"'),
+}
+print("自检:", checks)
+assert checks["MORNING-START"] == 1 and checks["MORNING-END"] == 1
+assert checks["EVENING-START"] == 1 and checks["EVENING-END"] == 1
+assert checks["小白解读"] >= 1
+print("OK")
